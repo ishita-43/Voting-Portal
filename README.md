@@ -58,6 +58,55 @@ Open the application in your browser:
 
 Navigate to http://localhost:3000 to view the app.
 
+## Alternative Ways to Run
+
+### Using NPM Scripts (Easier)
+We have added several NPM scripts to the root directory to make it easier to run the project without `cd`-ing into different folders.
+
+- **Install Dependencies**:
+  ```bash
+  npm run install:all
+  ```
+- **Start Local Blockchain (Anvil)**:
+  ```bash
+  npm run chain:start
+  ```
+- **Compile Contracts**:
+  ```bash
+  npm run contract:compile
+  ```
+- **Deploy Contracts**:
+  ```bash
+  npm run contract:deploy
+  ```
+- **Run Frontend**:
+  ```bash
+  npm run dev
+  ```
+
+### Using Makefile
+If you have `make` installed, you can use the following commands:
+
+- `make install`: Install dependencies.
+- `make chain`: Start local blockchain.
+- `make compile`: Compile smart contracts.
+- `make deploy`: Deploy smart contracts.
+- `make dev`: Run the frontend.
+- `make all`: Setup everything (install dependencies).
+
+### Using Docker (Frontend Only)
+You can run the frontend application using Docker.
+
+1. **Build the image**:
+   ```bash
+   docker build -t voting-system .
+   ```
+2. **Run the container**:
+   ```bash
+   docker run -p 3000:3000 voting-system
+   ```
+   Open http://localhost:3000 in your browser.
+
 # Contributing
 We welcome contributions from the community! To get started, please follow these steps:
 

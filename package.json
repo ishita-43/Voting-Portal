@@ -6,6 +6,11 @@
     "test": "test"
   },
   "scripts": {
+    "install:all": "cd frontend && npm install",
+    "chain:start": "anvil",
+    "contract:compile": "cd Foundry_Contracts && forge compile",
+    "contract:deploy": "cd Foundry_Contracts && forge script script/Deploy.s.sol:DeployWithData --fork-url http://localhost:8545 --broadcast --interactive",
+    "dev": "cd frontend && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
